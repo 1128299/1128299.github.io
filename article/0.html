@@ -1,0 +1,390 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>老博客 | 老博客</title><meta name="keywords" content="个人博客网站,博客网站笔记,博客网站运维,网站运维技术,网站搭建经验,个人博客网站模板"><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="老博客"><meta name="application-name" content="老博客"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="老博客"><meta property="og:url" content="http://www.laoboke.cn/article/0.html"><meta property="og:site_name" content="老博客"><meta property="og:description" content="title: 使用 PicGo+Typora+COS 搭建图床服务date: 2024-08-11 14:43:45categories: uncategorizedcover: https:&amp;#x2F;&amp;#x2F;laoboke-1319505737.cos.ap-seoul.myqcloud.com&amp;#x2F;uploa"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta property="article:author" content="John Doe"><meta property="article:tag" content="个人博客网站,博客网站笔记,博客网站运维,网站运维技术,网站搭建经验,个人博客网站模板"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg"><meta name="description" content="title: 使用 PicGo+Typora+COS 搭建图床服务date: 2024-08-11 14:43:45categories: uncategorizedcover: https:&amp;#x2F;&amp;#x2F;laoboke-1319505737.cos.ap-seoul.myqcloud.com&amp;#x2F;uploa"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="http://www.laoboke.cn/article/0"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: {"enable":true,"img":"https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png"},
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"local","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"xxxx","Referer":"https://xx.xx/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: '',
+  commentBarrageConfig:undefined,
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: undefined,
+  algolia: undefined,
+  localSearch: undefined,
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: John Doe","link":"链接: ","source":"来源: 老博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '老博客',
+  title: '老博客',
+  postAI: '',
+  pageFillDescription: 'title 使用 PicGo+Typora+COS 搭建图床服务date 2024-08-11 144345categories uncategorizedcover tags  - PIcgo图床上传  - 搭建图床keywords  - PIcgo图床上传  - 搭建图床  description 图床服务提供图片存储、图片加工处理、图片全网分发等功能为全球无数的博客网站和社区论坛提供了后端图片服务支撑。  copyright 老博客博客  copyright_author 老博客  copyright_author_href ‘‘  copyright_url ‘‘  copyright_info gt-    本站非常重视用户的隐私和个人信息保护。你在使用网站时可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问     网站时如何收集、使用、保存、共享和转让这些信息。, COS 用于图床场景的优势有：, 新增图片使用 COS 搭建图床服务, 安装 PicGo 并设置腾讯云 COS 服务相关参数。, Typora的相关设置使用搭建图床服务图床上传搭建图床图床上传搭建图床图床服务提供图片存储图片加工处理图片全网分发等功能为全球无数的博客网站和社区论坛提供了后端图片服务支撑老博客博客老博客本站非常重视用户的隐私和个人信息保护你在使用网站时可能会收集和使用你的相关信息通过隐私政策向你说明在你访问网站时如何收集使用保存共享和转让这些信息图床服务提供图片存储图片加工处理图片全网分发等功能为全球无数的博客网站和社区论坛提供了后端图片服务支撑开发者们可以使用腾讯云对象存储搭建图床服务是腾讯云提供的一种存储海量文件的分布式存储服务提供了更丰富的功能更优越的性能更高的可靠性保障用于图床场景的优势有低成本存储单价低按量付费用多少算多少还有资源包优惠不限速上传下载不限速不再长时间等待访问质量也更好高可用有高等级的可用性保障存储的数据有高达的持久性保障容量无限文件分布式存储支持海量文件容量按需使用新增图片使用搭建图床服务本次我们使用到以下工具一款支持多种云存储配置快捷生成图片链接的工具一款轻量级编辑器支持多种输出格式支持将本地图片一键上传至图床安装并设置腾讯云服务相关参数我们需要去的官方网站来进行软件下载下载和安装后在图床设置里找到腾讯云并配置以下相关参数项版本选择设定开发者拥有的项目身份识别用于身份认证可在密钥管理页面中创建和获取设定开发者拥有的项目身份密钥可在密钥管理页面获取设定存储桶中用于存储数据的容器有关存储桶的进一步说明请参见存储桶概述文档设定开发者访问服务时拥有的用户维度唯一资源标识用以标识资源可在密钥管理页面获取设定存储区域存储桶所属地域信息枚举值可参见可用地域文档例如等设定存储路径图片存放到存储桶中的路径设定自定义域名可选若您为上方的存储空间配置了自定义源站域名则可填写相关介绍可参见开启自定义源站域名设定网址后缀通过在网址后缀添加数据处理参数实现图片压缩裁剪格式转换等操作相关介绍可参见图片处理的相关设置近两年开始收费了不过价格还是能够接受的如果实在不可以接受可以搜索一下其他软件的教程在这里不在赘述其他软件的安装使用方法感兴趣的小伙伴可以自己去搜索我们需要进入的设置选项偏好设置图像在插入图片时选择上传图片在上传服务设定选择并设置刚才安装的位置重启使设置生效进入编辑器区域直接拖放或粘贴图片即可上传图片并自动替换为文件链接如果粘贴后没有自动替换为链接可以检查中的设置是否已打开这两款软件的设置在这里说的简单但是有些时候会报错特别是第四条如果遇到问题大家可以进行一下搜索写到这里基本上就完成了图床设置和图片上传的问题但是需要大家注意费用特别是网站流量起来之后',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-08-11 15:02:51',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">老博客</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" alt="微信" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" alt="支付宝" src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"><div class="console-card" id="card-newest-comments"><div class="card-content"><div class="author-content-item-tips">互动</div><span class="author-content-item-title"> 最新评论</span></div><div class="aside-list"><span>正在加载中...</span></div></div></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/" style="font-size: 1.05rem;">Hexo博客绑定自己的域名<sup>1</sup></a><a href="/tags/Node%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">Node的下载与安装<sup>1</sup></a><a href="/tags/git%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/" style="font-size: 1.05rem;">git的下载与安装<sup>1</sup></a><a href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFGitHub/" style="font-size: 1.05rem;">什么是GitHub<sup>1</sup></a><a href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFHexo/" style="font-size: 1.05rem;">什么是Hexo<sup>2</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" style="font-size: 1.05rem;">博客绑定域名<sup>1</sup></a><a href="/tags/%E9%9D%99%E6%80%81%E5%8C%96%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/" style="font-size: 1.05rem;">静态化博客框架<sup>3</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">八月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">6</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2024-08-11T06:43:45.582Z" title="发表于 2024-08-11 14:43:45">2024-08-11</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2024-08-11T07:02:51.844Z" title="更新于 2024-08-11 15:02:51">2024-08-11</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为长沙"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>长沙</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src=""></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="http://www.laoboke.cn/article/0.html"><header><h1 id="CrawlerTitle" itemprop="name headline">无题</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">John Doe</span><time itemprop="dateCreated datePublished" datetime="2024-08-11T06:43:45.582Z" title="发表于 2024-08-11 14:43:45">2024-08-11</time><time itemprop="dateCreated datePublished" datetime="2024-08-11T07:02:51.844Z" title="更新于 2024-08-11 15:02:51">2024-08-11</time></header><ol>
+<li><hr>
+<h2 id="title-使用-PicGo-Typora-COS-搭建图床服务date-2024-08-11-14-43-45categories-uncategorizedcover-https-laoboke-1319505737-cos-ap-seoul-myqcloud-com-uploads-08010-202408111452982-webptags-PIcgo图床上传-搭建图床keywords-PIcgo图床上传-搭建图床-description-图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。-copyright-老博客博客-copyright-author-老博客-copyright-author-href-‘https-www-laoboke-cn-‘-copyright-url-‘https-www-laoboke-cn‘-copyright-info-本站非常重视用户的隐私和个人信息保护。你在使用网站时，可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问-www-laoboke-cn-网站时，如何收集、使用、保存、共享和转让这些信息。"><a href="#title-使用-PicGo-Typora-COS-搭建图床服务date-2024-08-11-14-43-45categories-uncategorizedcover-https-laoboke-1319505737-cos-ap-seoul-myqcloud-com-uploads-08010-202408111452982-webptags-PIcgo图床上传-搭建图床keywords-PIcgo图床上传-搭建图床-description-图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。-copyright-老博客博客-copyright-author-老博客-copyright-author-href-‘https-www-laoboke-cn-‘-copyright-url-‘https-www-laoboke-cn‘-copyright-info-本站非常重视用户的隐私和个人信息保护。你在使用网站时，可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问-www-laoboke-cn-网站时，如何收集、使用、保存、共享和转让这些信息。" class="headerlink" title="title: 使用 PicGo+Typora+COS 搭建图床服务date: 2024-08-11 14:43:45categories: uncategorizedcover: https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408111452982.webptags:  - PIcgo图床上传  - 搭建图床keywords:  - PIcgo图床上传  - 搭建图床  description: 图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。  copyright: 老博客博客  copyright_author: 老博客  copyright_author_href: ‘https://www.laoboke.cn/‘  copyright_url: ‘https://www.laoboke.cn‘  copyright_info: &gt;-    本站非常重视用户的隐私和个人信息保护。你在使用网站时，可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问 www.laoboke.cn    网站时，如何收集、使用、保存、共享和转让这些信息。"></a>title: 使用 PicGo+Typora+COS 搭建图床服务<br>date: 2024-08-11 14:43:45<br>categories: uncategorized<br>cover: <a target="_blank" rel="noopener" href="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408111452982.webp">https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408111452982.webp</a><br>tags:<br>  - PIcgo图床上传<br>  - 搭建图床<br>keywords:<br>  - PIcgo图床上传<br>  - 搭建图床<br>  description: 图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。<br>  copyright: 老博客博客<br>  copyright_author: 老博客<br>  copyright_author_href: ‘<a href="https://www.laoboke.cn/">https://www.laoboke.cn/</a>‘<br>  copyright_url: ‘<a href="https://www.laoboke.cn/">https://www.laoboke.cn</a>‘<br>  copyright_info: &gt;-<br>    本站非常重视用户的隐私和个人信息保护。你在使用网站时，可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问 <a href="http://www.laoboke.cn/">www.laoboke.cn</a><br>    网站时，如何收集、使用、保存、共享和转让这些信息。</h2></li>
+</ol>
+<p>　　图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。开发者们可以使用腾讯云对象存储<code>（Cloud Object Storage，COS）</code>搭建图床服务，<code>COS</code> 是腾讯云提供的一种存储海量文件的分布式存储服务，提供了更丰富的功能、更优越的性能、更高的可靠性保障。</p>
+<h3 id="COS-用于图床场景的优势有："><a href="#COS-用于图床场景的优势有：" class="headerlink" title="COS 用于图床场景的优势有："></a>COS 用于图床场景的优势有：</h3><ol>
+<li>低成本：存储单价低，按量付费，用多少算多少，还有资源包优惠。</li>
+<li>不限速：上传下载不限速，不再长时间等待 <code>loading</code>，访问质量也更好。</li>
+<li>高可用：有高等级的 <code>SLA</code> 可用性保障，存储的数据有高达99.99999%的持久性保障。</li>
+<li>容量无限：文件分布式存储，支持海量文件，容量按需使用。</li>
+</ol>
+<h3 id="新增图片使用-COS-搭建图床服务"><a href="#新增图片使用-COS-搭建图床服务" class="headerlink" title="新增图片使用 COS 搭建图床服务"></a>新增图片使用 COS 搭建图床服务</h3><p>　　本次我们使用到以下工具：</p>
+<ol>
+<li><code>PicGo</code>：一款支持多种云存储配置、快捷生成图片链接的工具。</li>
+<li><code>Typora</code>：一款轻量级 <code>Markdown</code> 编辑器，支持多种输出格式，支持将本地图片一键上传至图床。</li>
+</ol>
+<h3 id="安装-PicGo-并设置腾讯云-COS-服务相关参数。"><a href="#安装-PicGo-并设置腾讯云-COS-服务相关参数。" class="headerlink" title="安装 PicGo 并设置腾讯云 COS 服务相关参数。"></a>安装 <code>PicGo</code> 并设置腾讯云 <code>COS</code> 服务相关参数。</h3><p>　　我们需要去<code>PicGo</code>的官方网站来进行软件下载，下载和安装 <code>PicGo</code> 后，在图床设置里找到<code>腾讯云 COS</code>，并配置以下相关参数项：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://molunerfinn.com/PicGo/</span><br></pre></td></tr></table></figure>
+
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408111452982.webp"></p>
+<ol>
+<li>COS 版本：选择 COS v5。</li>
+<li>设定 Secretld：开发者拥有的项目身份识别 ID，用于身份认证，可在 <a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/capi">API 密钥管理</a> 页面中创建和获取。</li>
+<li>设定 SecretKey：开发者拥有的项目身份密钥，可在 <a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/capi">API 密钥管理</a> 页面获取。  </li>
+<li>设定 Bucket：存储桶，COS 中用于存储数据的容器。有关存储桶的进一步说明，请参见 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/13312">存储桶概述</a> 文档。</li>
+<li>设定 AppId：开发者访问 COS 服务时拥有的用户维度唯一资源标识，用以标识资源，可在 <a target="_blank" rel="noopener" href="https://console.cloud.tencent.com/capi">API 密钥管理</a> 页面获取。</li>
+<li>设定存储区域：存储桶所属地域信息，枚举值可参见 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/6224">可用地域</a> 文档，例如 <code>ap-beijing、ap-hongkong、eu-frankfurt</code> 等。</li>
+<li>设定存储路径：图片存放到 COS 存储桶中的路径。</li>
+<li>设定自定义域名：可选，若您为上方的存储空间配置了自定义源站域名，则可填写。相关介绍可参见 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/36638">开启自定义源站域名</a>。</li>
+<li>设定网址后缀：通过在网址后缀添加 COS 数据处理参数实现图片压缩、裁剪、格式转换等操作，相关介绍可参见 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/document/product/436/54049">图片处理</a>。</li>
+</ol>
+<h3 id="Typora的相关设置"><a href="#Typora的相关设置" class="headerlink" title="Typora的相关设置"></a>Typora的相关设置</h3><p>　　近两年<code>Typora</code>开始收费了，不过价格还是能够接受的，如果实在不可以接受，可以搜索一下其他软件的教程，在这里不在赘述其他软件的安装使用方法，感兴趣的小伙伴可以自己去搜索。我们需要进入<code>Typora</code>的设置选项，偏好设置，图像</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408111457065.webp"></p>
+<ol>
+<li>在插入图片时，选择上传图片。</li>
+<li>在上传服务设定，选择 <code>PicGo(app)</code>，并设置刚才安装的 <code>PicGo.exe</code> 位置。</li>
+<li>重启 typora，使设置生效。 </li>
+<li>进入 <code>Typora</code> 编辑器区域，直接拖放或粘贴图片，即可上传图片并自动替换为 COS 文件链接。（如果粘贴后没有自动替换为 COS 链接，可以检查 <code>PicGo</code> 中的 <code>server</code> 设置是否已打开）。</li>
+<li>这两款软件的设置，在这里说的简单，但是有些时候会报错，特别是第四条，如果遇到问题，大家可以进行一下搜索。</li>
+</ol>
+<p>　　写到这里，基本上就完成了图床设置和图片上传的问题，但是需要大家注意费用特别是网站流量起来之后。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" title="头像" alt="头像"></a><div class="post-copyright__author_name">John Doe</div><div class="post-copyright__author_desc">专注个人博客网站搭建,分享博客网站运维技术!</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="http://www.laoboke.cn/article/0.html">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('http://www.laoboke.cn/article/0.html')">老博客</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul><a class="reward-main-btn" href="/about/#about-reward" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="http://www.laoboke.cn/article/0.html"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=老博客&amp;url=http://www.laoboke.cn/article/0.html&amp;pic=" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://www.laoboke.cn" target="_blank">老博客</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/article/420e678e.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408100712179.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">人人都可以搭建的Hexo博客--绑定自己的域名来访问</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://bu.dusays.com/2023/04/27/64496e511b09c.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__description">老博客网是一个博客网站，主要分享个人博客网站搭建经历,个人博客网站技术笔记,个人博客网站的运维心得,以及网站运维技术和网站搭建经验,分享一些个人博客网站的测试模板！</div></div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="null"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(https://bu.dusays.com/2023/01/13/63c02edf44033.png) center center / 100% no-repeat"></div><div class="back face" style="background: url(https://bu.dusays.com/2023/05/13/645fa415e8694.png) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-%E4%BD%BF%E7%94%A8-PicGo-Typora-COS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E6%9C%8D%E5%8A%A1date-2024-08-11-14-43-45categories-uncategorizedcover-https-laoboke-1319505737-cos-ap-seoul-myqcloud-com-uploads-08010-202408111452982-webptags-PIcgo%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8Akeywords-PIcgo%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A-description-%E5%9B%BE%E5%BA%8A%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E5%9B%BE%E7%89%87%E5%AD%98%E5%82%A8%E3%80%81%E5%9B%BE%E7%89%87%E5%8A%A0%E5%B7%A5%E5%A4%84%E7%90%86%E3%80%81%E5%9B%BE%E7%89%87%E5%85%A8%E7%BD%91%E5%88%86%E5%8F%91%E7%AD%89%E5%8A%9F%E8%83%BD%EF%BC%8C%E4%B8%BA%E5%85%A8%E7%90%83%E6%97%A0%E6%95%B0%E7%9A%84%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E5%92%8C%E7%A4%BE%E5%8C%BA%E8%AE%BA%E5%9D%9B%E6%8F%90%E4%BE%9B%E4%BA%86%E5%90%8E%E7%AB%AF%E5%9B%BE%E7%89%87%E6%9C%8D%E5%8A%A1%E6%94%AF%E6%92%91%E3%80%82-copyright-%E8%80%81%E5%8D%9A%E5%AE%A2%E5%8D%9A%E5%AE%A2-copyright-author-%E8%80%81%E5%8D%9A%E5%AE%A2-copyright-author-href-%E2%80%98https-www-laoboke-cn-%E2%80%98-copyright-url-%E2%80%98https-www-laoboke-cn%E2%80%98-copyright-info-%E6%9C%AC%E7%AB%99%E9%9D%9E%E5%B8%B8%E9%87%8D%E8%A7%86%E7%94%A8%E6%88%B7%E7%9A%84%E9%9A%90%E7%A7%81%E5%92%8C%E4%B8%AA%E4%BA%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E6%8A%A4%E3%80%82%E4%BD%A0%E5%9C%A8%E4%BD%BF%E7%94%A8%E7%BD%91%E7%AB%99%E6%97%B6%EF%BC%8C%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%94%B6%E9%9B%86%E5%92%8C%E4%BD%BF%E7%94%A8%E4%BD%A0%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%E3%80%82%E9%80%9A%E8%BF%87%E3%80%8A%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96%E3%80%8B%E5%90%91%E4%BD%A0%E8%AF%B4%E6%98%8E%E5%9C%A8%E4%BD%A0%E8%AE%BF%E9%97%AE-www-laoboke-cn-%E7%BD%91%E7%AB%99%E6%97%B6%EF%BC%8C%E5%A6%82%E4%BD%95%E6%94%B6%E9%9B%86%E3%80%81%E4%BD%BF%E7%94%A8%E3%80%81%E4%BF%9D%E5%AD%98%E3%80%81%E5%85%B1%E4%BA%AB%E5%92%8C%E8%BD%AC%E8%AE%A9%E8%BF%99%E4%BA%9B%E4%BF%A1%E6%81%AF%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">title: 使用 PicGo+Typora+COS 搭建图床服务date: 2024-08-11 14:43:45categories: uncategorizedcover: https:&#x2F;&#x2F;laoboke-1319505737.cos.ap-seoul.myqcloud.com&#x2F;uploads&#x2F;08010&#x2F;202408111452982.webptags:  - PIcgo图床上传  - 搭建图床keywords:  - PIcgo图床上传  - 搭建图床  description: 图床服务提供图片存储、图片加工处理、图片全网分发等功能，为全球无数的博客网站和社区论坛提供了后端图片服务支撑。  copyright: 老博客博客  copyright_author: 老博客  copyright_author_href: ‘https:&#x2F;&#x2F;www.laoboke.cn&#x2F;‘  copyright_url: ‘https:&#x2F;&#x2F;www.laoboke.cn‘  copyright_info: &gt;-    本站非常重视用户的隐私和个人信息保护。你在使用网站时，可能会收集和使用你的相关信息。通过《隐私政策》向你说明在你访问 www.laoboke.cn    网站时，如何收集、使用、保存、共享和转让这些信息。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#COS-%E7%94%A8%E4%BA%8E%E5%9B%BE%E5%BA%8A%E5%9C%BA%E6%99%AF%E7%9A%84%E4%BC%98%E5%8A%BF%E6%9C%89%EF%BC%9A"><span class="toc-number">1.1.</span> <span class="toc-text">COS 用于图床场景的优势有：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%A2%9E%E5%9B%BE%E7%89%87%E4%BD%BF%E7%94%A8-COS-%E6%90%AD%E5%BB%BA%E5%9B%BE%E5%BA%8A%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.2.</span> <span class="toc-text">新增图片使用 COS 搭建图床服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-PicGo-%E5%B9%B6%E8%AE%BE%E7%BD%AE%E8%85%BE%E8%AE%AF%E4%BA%91-COS-%E6%9C%8D%E5%8A%A1%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0%E3%80%82"><span class="toc-number">1.3.</span> <span class="toc-text">安装 PicGo 并设置腾讯云 COS 服务相关参数。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Typora%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">Typora的相关设置</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/article/0.html" title="无题">无题</a><time datetime="2024-08-11T06:43:45.582Z" title="发表于 2024-08-11 14:43:45">2024-08-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/420e678e.html" title="人人都可以搭建的Hexo博客--绑定自己的域名来访问"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/08010/202408100712179.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人人都可以搭建的Hexo博客--绑定自己的域名来访问"/></a><div class="content"><a class="title" href="/article/420e678e.html" title="人人都可以搭建的Hexo博客--绑定自己的域名来访问">人人都可以搭建的Hexo博客--绑定自己的域名来访问</a><time datetime="2024-08-09T22:22:26.000Z" title="发表于 2024-08-10 06:22:26">2024-08-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/a081e542.html" title="人人都可以搭建的Hexo博客--部署到GitHub的免费空间"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/0807/202408081535628.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人人都可以搭建的Hexo博客--部署到GitHub的免费空间"/></a><div class="content"><a class="title" href="/article/a081e542.html" title="人人都可以搭建的Hexo博客--部署到GitHub的免费空间">人人都可以搭建的Hexo博客--部署到GitHub的免费空间</a><time datetime="2024-08-07T10:59:07.000Z" title="发表于 2024-08-07 18:59:07">2024-08-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/bd15d44c.html" title="人人都可以搭建的Hexo博客--部署Hexo本地服务篇"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/0805/202408081452363.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人人都可以搭建的Hexo博客--部署Hexo本地服务篇"/></a><div class="content"><a class="title" href="/article/bd15d44c.html" title="人人都可以搭建的Hexo博客--部署Hexo本地服务篇">人人都可以搭建的Hexo博客--部署Hexo本地服务篇</a><time datetime="2024-08-05T05:48:37.000Z" title="发表于 2024-08-05 13:48:37">2024-08-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/article/3758dd9c.html" title="人人都可以搭建的Hexo博客--部署Hexo本地环境篇"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://laoboke-1319505737.cos.ap-seoul.myqcloud.com/uploads/0805/202408081451594.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="人人都可以搭建的Hexo博客--部署Hexo本地环境篇"/></a><div class="content"><a class="title" href="/article/3758dd9c.html" title="人人都可以搭建的Hexo博客--部署Hexo本地环境篇">人人都可以搭建的Hexo博客--部署Hexo本地环境篇</a><time datetime="2024-08-04T22:39:42.000Z" title="发表于 2024-08-05 06:39:42">2024-08-05</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2024 By <a class="footer-bar-link" href="/" title="John Doe" target="_blank">John Doe</a></div></div><div id="footer-type-tips"></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu" title="主题">主题</a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">1</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://blog.anheyu.com/" title="博客"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="博客"/><span class="back-menu-item-text">博客</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://image.anheyu.com/" title="安知鱼图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="安知鱼图床"/><span class="back-menu-item-text">安知鱼图床</span></a></div></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/Hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/" style="font-size: 0.88rem;">Hexo博客绑定自己的域名<sup>1</sup></a><a href="/tags/Node%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">Node的下载与安装<sup>1</sup></a><a href="/tags/git%E7%9A%84%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/" style="font-size: 0.88rem;">git的下载与安装<sup>1</sup></a><a href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFGitHub/" style="font-size: 0.88rem;">什么是GitHub<sup>1</sup></a><a href="/tags/%E4%BB%80%E4%B9%88%E6%98%AFHexo/" style="font-size: 0.88rem;">什么是Hexo<sup>2</sup></a><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/" style="font-size: 0.88rem;">博客绑定域名<sup>1</sup></a><a href="/tags/%E9%9D%99%E6%80%81%E5%8C%96%E5%8D%9A%E5%AE%A2%E6%A1%86%E6%9E%B6/" style="font-size: 0.88rem;">静态化博客框架<sup>3</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@5.0.28/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@17.8.5/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.6.12",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 John Doe 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><div class="js-pjax"><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
